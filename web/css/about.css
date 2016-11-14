@@ -1,0 +1,54 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  /*background-image: url("../images/background1.jpg");*/
+  background-size: 100%;
+}
+
+.logo {
+  left: 0;
+  top: -45px;
+  height: 50%;
+  width: 19%;
+  position: absolute;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 5px;
+  background-color: #d14f62;
+  width: 80%;
+  left: 19%;
+  height: 100%;
+}
+
+footer {
+  background-color: #d14f62;
+  color: white;
+  bottom: 5px;
+  right: 5px;
+  left: 5px;
+  /*position: relative;*/
+  border-radius: 5px;
+  border-color: #000;
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 850px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;}
+
+  .logo {
+  	display: none;
+  }
+
+  .navbar {
+  	width: 100%;
+  	left: 0;
+  }
+}
