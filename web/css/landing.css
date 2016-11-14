@@ -1,0 +1,79 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  /*background-image: url("../images/background1.jpg");*/
+  /*background-image: url("http://69.195.95.94/wp-content/uploads/2013/04/iStock_000018903795Medium.jpg");*/
+  background-image: url("https://evolllution.com/wp-content/uploads/2013/07/Busy-Student.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  left: 0;
+  top: -8%;
+  position: fixed;
+  height: 50%;
+}
+
+/*Custom navbar tings*/
+.navbar {
+  margin-bottom: 0;
+  border-radius: 5px;
+  background-color: #d14f62;
+  width: 50%;
+  left: 49%;
+}
+
+.colorWhite {
+	color: #fff;
+}
+
+.rightSection {
+  background-color: #fff;
+  opacity: 0.9;
+  border-radius: 5px;
+  width: 40%;
+  left: 54%;
+  color: #e83c58;
+  position: relative;
+  padding: 5px;
+  top: 20px;
+  height: 100%;
+  font-family: Papyrus;
+  text-align: center;
+}
+
+/* Footer tings */
+footer {
+  background-color: #d14f62;
+  color: white;
+  padding: 15px;
+  bottom: 5px;
+  right: 5px;
+  left: 5px;
+  position: fixed;
+  border-radius: 5px;
+  border-color: #000;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.rightSection button {
+  background-color: hsl(350, 100%, 69%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff607b", endColorstr="#ff607b");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ff607b), to(#ff607b));
+  background-image: -moz-linear-gradient(top, #ff607b, #ff607b);
+  background-image: -ms-linear-gradient(top, #ff607b, #ff607b);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff607b), color-stop(100%, #ff607b));
+  background-image: -webkit-linear-gradient(top, #ff607b, #ff607b);
+  background-image: -o-linear-gradient(top, #ff607b, #ff607b);
+  background-image: linear-gradient(#ff607b, #ff607b);
+  border-color: #ff607b #ff607b hsl(350, 100%, 69%);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.00);
+  -webkit-font-smoothing: antialiased;
+  width: 40%;
+  height: 40px;
+  font-size: 25px;
+  color: #fff;
+}
