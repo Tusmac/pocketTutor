@@ -8,11 +8,8 @@ body {
   background-repeat: no-repeat;
 }
 
-.logo {
-  left: 0;
-  top: -8%;
-  position: fixed;
-  height: 50%;
+.paddingBottom15 {
+  padding-bottom: 15px;
 }
 
 /*Custom navbar tings*/
@@ -20,8 +17,8 @@ body {
   margin-bottom: 0;
   border-radius: 5px;
   background-color: #d14f62;
-  width: 50%;
-  left: 49%;
+  /*width: 50%;
+  left: 49%;*/
 }
 
 .colorWhite {
@@ -32,13 +29,13 @@ body {
   background-color: #fff;
   opacity: 0.9;
   border-radius: 5px;
-  width: 40%;
-  left: 54%;
+  /*width: 40%;
+  left: 54%;*/
   color: #e83c58;
-  position: relative;
+  /*position: relative;*/
   padding: 5px;
-  top: 20px;
-  height: 100%;
+  /*top: 20px;
+  height: 100%;*/
   font-family: Papyrus;
   text-align: center;
 }
@@ -75,4 +72,26 @@ footer {
   height: 40px;
   font-size: 25px;
   color: #fff;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 850px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;}
+
+  body {
+    background-image: none;
+  }
 }
