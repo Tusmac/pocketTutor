@@ -9,7 +9,7 @@ body {
   left: 0;
   top: -45px;
   height: 50%;
-  width: 19%;
+  width: 15%;
   position: absolute;
 }
 
@@ -17,9 +17,20 @@ body {
   margin-bottom: 0;
   border-radius: 5px;
   background-color: #d14f62;
-  width: 80%;
-  left: 19%;
+  width: 81%;
+  left: 18%;
   height: 100%;
+}
+
+#signUpWindow {
+  background-color: #fff;
+  color: #d14f62;
+  display: none;
+  width: 300px;
+  height: 500px;
+  left: 45%;
+  top: 20%;
+  position: fixed;
 }
 
 footer {
@@ -33,6 +44,16 @@ footer {
   border-color: #000;
   border-style: solid;
   border-width: 1px;
+}
+
+.darkBackground {
+  display: none;
+  background:#000; 
+  position:fixed; 
+  top:0; left:0; 
+  width:100%; 
+  height:100%;
+  z-index:10;
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
