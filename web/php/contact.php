@@ -12,7 +12,7 @@
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="../css/signUp.css" rel="stylesheet">
+    <link href="../css/contact.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,10 +39,10 @@
                 <ul class="nav navbar-nav">
                   <li><a href="landing.html">Home</a></li>
                   <li><a href="about.html">About</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li class="active"><a href="#">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                  <li class="active" id="signUp"><a href="#">Sign Up</a></li>
+                  <li id="signUp"><a href="#">Sign Up</a></li>
                   <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
               </div>
@@ -59,7 +59,7 @@
         <div class="col-sm-8 rightSection paddingBottom15">
           <div class="form-container">
             <form class="form form-horizontal component-uff" data-step-method="sliding" action=" " method="post"  id="signUpForm" role="form">
-              <h2 class="text-center">Sign Up</h2>
+              <h2 class="text-center">Contact Us</h2>
 
               <div class="row">
                 <div class="col-md-2"></div>
@@ -77,7 +77,9 @@
                                  class="form-control"
                                  name="first_name"
                                  required="required" 
-                                 value="<?php echo $first_name; ?>" 
+                                 value="<?php if (isset($_POST['first_name'])) {
+                                            echo $_POST['first_name'];
+                                          }?>" 
                               >
                         </div>
                       </div>
@@ -89,7 +91,10 @@
                                   type="text"
                                   class="form-control"
                                   name="last_name"
-                                 required="required"
+                                  required="required"
+                                  value="<?php if (isset($_POST['last_name'])) {
+                                            echo $_POST['last_name'];
+                                          }?>"
                               >
                         </div>
                       </div>
@@ -101,6 +106,7 @@
                             <option value="1">Select</option>
                             <option value="2">Cornell</option>
                             <option value="3">Ithaca</option>
+                            <option value="4">Other</option>
                           </select>
                         </div>
                       </div>
@@ -115,6 +121,7 @@
                             <option value="4">Junior</option>
                             <option value="3">Senior</option>
                             <option value="4">Post-Grad</option>
+                            <option value="4">Other</option>
                           </select>
                         </div>
                       </div>
@@ -128,53 +135,33 @@
                                   name="email"
                                   required="required"
                                   placeholder="abc123@cornell.edu" 
+                                  value="<?php if (isset($_POST['email'])) {
+                                            echo $_POST['email'];
+                                          }?>"
                               >
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label class="col-sm-2 control-label" data-sb="rollIn">Phone</label>
+                        <label class="col-sm-2 control-label" data-sb="rollIn">Message</label>
                         <div class="col-sm-10">
-                          <input  data-sb="bounceInLeft"
+                          <textarea  data-sb="bounceInLeft"
                                   type="email"
                                   class="form-control"
-                                  name="phone"
+                                  name="message"
                                   required="required"
-                                  placeholder="abc123@cornell.edu" 
-                              >
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-2 control-label" data-sb="rollIn">Password</label>
-                        <div class="col-sm-10">
-                          <input data-sb="bounceInLeft"
-                                 type="password"
-                                 class="form-control"
-                                 id="password"
-                                 name="password"
-                                 required="required"
-                              >
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-2 control-label" data-sb="rollIn">Re-enter Password</label>
-                        <div class="col-sm-10">
-                          <input data-sb="bounceInLeft"
-                                 type="password"
-                                 class="form-control"
-                                 id="passwordCopy"
-                                 name="passwordCopy"
-                                 required="required"
-                              >
+                                  placeholder="Hi, I really like your service ... " 
+                                  value="<?php if (isset($_POST['message'])) {
+                                            echo $_POST['message'];
+                                          }?>"
+                              ></textarea>
                         </div>
                       </div>
 
                       <ul class="pager">
                         <!-- <li class="left" data-sb="bounceInLeft"><a class="prev" data-step-previous="">&laquo; Previous</a></li> -->
                         <!-- <li class="right" data-sb="bounceInLeft"><a class="next" data-step-finish>Finish &raquo;</a></li> -->
-                        <button type="submit" class="right" data-sb="bounceInLeft">Submit &raquo;</button>
+                        <button type="submit" class="right" onclick="submitted()" data-sb="bounceInLeft">Submit &raquo;</button>
                       </ul>
 
                       <div class="clearfix"></div>
@@ -206,6 +193,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 
     <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <script src="../js/signUp.js"></script>
+    <script src="../js/contact.js"></script>
   </body>
 </html>

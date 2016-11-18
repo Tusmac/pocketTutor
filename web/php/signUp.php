@@ -77,7 +77,9 @@
                                  class="form-control"
                                  name="first_name"
                                  required="required" 
-                                 value="<?php echo $first_name; ?>" 
+                                 value="<?php if (isset($_POST['first_name'])) {
+                                            echo $_POST['first_name'];
+                                          }?>" 
                               >
                         </div>
                       </div>
@@ -89,7 +91,10 @@
                                   type="text"
                                   class="form-control"
                                   name="last_name"
-                                 required="required"
+                                  required="required"
+                                  value="<?php if (isset($_POST['last_name'])) {
+                                            echo $_POST['last_name'];
+                                          }?>"
                               >
                         </div>
                       </div>
@@ -128,6 +133,9 @@
                                   name="email"
                                   required="required"
                                   placeholder="abc123@cornell.edu" 
+                                  value="<?php if (isset($_POST['email'])) {
+                                            echo $_POST['email'];
+                                          }?>"
                               >
                         </div>
                       </div>
@@ -141,6 +149,9 @@
                                   name="phone"
                                   required="required"
                                   placeholder="abc123@cornell.edu" 
+                                  value="<?php if (isset($_POST['phone'])) {
+                                            echo $_POST['phone'];
+                                          }?>"
                               >
                         </div>
                       </div>
@@ -174,7 +185,7 @@
                       <ul class="pager">
                         <!-- <li class="left" data-sb="bounceInLeft"><a class="prev" data-step-previous="">&laquo; Previous</a></li> -->
                         <!-- <li class="right" data-sb="bounceInLeft"><a class="next" data-step-finish>Finish &raquo;</a></li> -->
-                        <button type="submit" class="right" data-sb="bounceInLeft">Submit &raquo;</button>
+                        <button type="submit" class="right" onclick="submitted()" data-sb="bounceInLeft">Submit &raquo;</button>
                       </ul>
 
                       <div class="clearfix"></div>
